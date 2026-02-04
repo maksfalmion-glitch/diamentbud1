@@ -262,6 +262,30 @@ closeBtn.addEventListener("click", function(){
 
 </script>
 
+  #services-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  max-height: 250px;
+  overflow-y: auto;
+  background: #111;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 200;
+}
+#services-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  border-bottom: 1px solid #333;
+  text-decoration: none;
+}
+#services-dropdown a:hover {
+  background: #facc15;
+  color: #111;
+}
 
 </style>
 </head>
@@ -277,7 +301,7 @@ closeBtn.addEventListener("click", function(){
   
   <!-- MENU OFERTA Z DROPDOWN -->
 <div class="dropdown">
-  <a href="#" id="dropdown-btn">Oferta ▾</a>
+  <a href="#" id="dropdown-btn" class="dropbtn">Oferta ▾</a>
   <div id="services-dropdown">
     <div style="text-align:right; padding:5px 10px;">
       <span id="close-dropdown" style="cursor:pointer; font-size:18px; color:#facc15;">&times;</span>
@@ -551,8 +575,31 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+  <script>
+const dropdownBtn = document.getElementById('dropdown-btn');
+const servicesDropdown = document.getElementById('services-dropdown');
+const closeDropdown = document.getElementById('close-dropdown');
+
+dropdownBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  servicesDropdown.style.display = servicesDropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+closeDropdown.addEventListener('click', () => {
+  servicesDropdown.style.display = 'none';
+});
+
+// kliknięcie poza dropdown zamyka
+window.addEventListener('click', (e) => {
+  if (!servicesDropdown.contains(e.target) && e.target !== dropdownBtn) {
+    servicesDropdown.style.display = 'none';
+  }
+});
+</script>
+
 </body>
 </html>
+
 
 
 
