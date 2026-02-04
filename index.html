@@ -192,30 +192,67 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   color: #111;
 }
 
-  /* DROPDOWN MENU */
-.dropdown {position:relative; display:inline-block;}
+<style>
+/* DROPDOWN W HEADERZE – poprawiony */
+.dropdown { position: relative; display: inline-block; max-width: 100%; }
 #services-dropdown {
-  display:none;
-  position:absolute;
-  background:white;
-  min-width:220px;
-  max-height:250px;  /* wysokość do scrolla */
-  overflow-y:auto;
-  box-shadow:0 4px 15px rgba(0,0,0,0.2);
-  z-index:200;
-  border-radius:6px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  max-width: 90vw;      /* nie wylatuje poza ekran */
+  max-height: 250px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #111;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 200;
 }
 #services-dropdown a {
-  display:block;
-  padding:10px 15px;
-  color:#111;
-  border-bottom:1px solid #eee;
-  text-decoration:none;
+  display: block;
+  padding: 10px 15px;
+  color: white;           /* białe linki */
+  border-bottom: 1px solid #333;
+  text-decoration: none;
 }
 #services-dropdown a:hover {
-  background:#facc15;
-  color:#111;
+  background: #facc15;
+  color: #111;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #services-dropdown {
+    position: fixed;
+    top: 60px;
+    left: 5%;
+    right: 5%;
+    width: auto;
+    max-height: 300px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownBtn = document.getElementById("dropdown-btn");
+  const dropdown = document.getElementById("services-dropdown");
+
+  dropdownBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+  });
+
+  window.addEventListener("click", function(e){
+    if(!dropdown.contains(e.target) && e.target !== dropdownBtn){
+      dropdown.style.display = "none";
+    }
+  });
+});
+</script>
+
 
 </style>
 </head>
@@ -504,6 +541,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
 
 
 
