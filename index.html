@@ -5,6 +5,7 @@
 <title>DIAMENT BUD – Profesjonalne usługi diamentowe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+/* PODSTAWOWE */
 body {margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#333; background:#f7f7f7;}
 a {text-decoration:none;}
 .container {width:90%; max-width:1200px; margin:auto;}
@@ -17,39 +18,55 @@ header nav a {color:white; margin-left:20px; font-weight:500; transition:0.3s;}
 header nav a:hover {color:#facc15;}
 
 /* HERO */
-.hero {background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1564636282759-448a64d8ea96?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat; color:white; text-align:center; padding:120px 20px;}
+.hero {background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/szkolenie.jpg') center/cover no-repeat; color:white; text-align:center; padding:120px 20px;}
 .hero h1 {font-size:50px; margin-bottom:20px; text-shadow: 1px 1px 5px rgba(0,0,0,0.7);}
 .hero p {font-size:22px; margin-bottom:30px;}
 .hero .btn {background:#facc15; color:#111; padding:16px 32px; font-weight:bold; border-radius:6px; margin:0 10px; transition:0.3s;}
 .hero .btn:hover {opacity:0.85;}
 .hero .btn.secondary {background:transparent; border:2px solid #facc15; color:white;}
 
-/* SECTION */
-.section {padding:80px 20px;}
-.section h2 {text-align:center; font-size:36px; margin-bottom:35px; color:#111;}
-.section p {text-align:center; max-width:850px; margin:auto; line-height:1.8; color:#555;}
+/* O NASZEJ FIRMIE */
+.about {padding:80px 20px; background:#f9f9f9;}
+.about .container {display:flex; flex-wrap:wrap; align-items:center; gap:50px;}
+.about-text {flex:1; min-width:300px; padding-right:30px;}
+.about-text h2 {font-size:38px; margin-bottom:25px; color:#111;}
+.about-text h3 {font-size:24px; color:#111; margin-bottom:15px;}
+.about-text p, .about-text li {color:#555; line-height:1.8;}
+.about-text ul {list-style:none; padding:0; margin-bottom:25px;}
+.about-text ul li {position:relative; padding-left:20px; margin-bottom:8px;}
+.about-text ul li::before {content:"•"; position:absolute; left:0; color:#facc15;}
+.about-image {flex:1; min-width:300px; display:flex; justify-content:center; align-items:center;}
+.about-image img {max-width:350px; width:100%; border-radius:12px; box-shadow:0 15px 35px rgba(0,0,0,0.12);}
 
-/* FEATURES */
-.features {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:40px; margin-top:50px;}
+/* ATUTY */
+.features {padding:80px 20px; background:#f7f7f7;}
+.features h2 {text-align:center; font-size:36px; margin-bottom:35px; color:#111;}
+.features-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:40px;}
 .feature {text-align:center; background:white; padding:25px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:0.3s;}
 .feature:hover {transform: translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.1);}
 .feature img {width:60px; margin-bottom:15px;}
 .feature h3 {font-size:22px; margin-bottom:10px; color:#111;}
 
-/* SERVICES */
-.services {display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; margin-top:50px;}
+/* USŁUGI */
+.services {padding:80px 20px; background:#fff;}
+.services h2 {text-align:center; font-size:36px; margin-bottom:35px; color:#111;}
+.services-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px;}
 .services .card {background:white; padding:25px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:0.3s;}
 .services .card:hover {transform: translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.1);}
 .services .card h3 {margin-bottom:12px; font-size:22px; color:#111;}
+.services .card p {color:#555; line-height:1.6;}
 
-/* STATS */
-.stats {display:flex; justify-content:space-around; flex-wrap:wrap; gap:50px; margin-top:50px;}
+/* STATYSTYKI */
+.stats {padding:80px 20px; display:flex; justify-content:space-around; flex-wrap:wrap; gap:50px; background:#f7f7f7;}
 .stat {text-align:center; background:white; padding:25px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.05);}
 .stat h3 {font-size:50px; color:#facc15; margin-bottom:10px;}
 .stat p {font-size:18px; color:#555;}
 
-/* CONTACT FORM */
-.contact-form {max-width:600px; margin:40px auto 0 auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 25px rgba(0,0,0,0.05);}
+/* FORMULARZ KONTAKTOWY */
+.contact {padding:80px 20px; background:#fff;}
+.contact h2 {text-align:center; font-size:36px; margin-bottom:35px; color:#111;}
+.contact p {text-align:center; margin-bottom:25px; color:#555;}
+.contact-form {max-width:600px; margin:0 auto; background:white; padding:30px; border-radius:12px; box-shadow:0 4px 25px rgba(0,0,0,0.05);}
 .contact-form input, .contact-form textarea {width:100%; padding:14px; margin-bottom:18px; border:1px solid #ccc; border-radius:6px; transition:0.3s;}
 .contact-form input:focus, .contact-form textarea:focus {border-color:#facc15; outline:none;}
 .contact-form button {background:#111; color:white; padding:16px; border:none; width:100%; font-size:18px; cursor:pointer; border-radius:6px; transition:0.3s;}
@@ -57,6 +74,81 @@ header nav a:hover {color:#facc15;}
 
 /* FOOTER */
 footer {background:#111; color:white; text-align:center; padding:35px; margin-top:60px; font-size:14px;}
+
+/* ANIMACJE */
+.fade-in {opacity:0; transform:translateY(30px); transition: all 0.8s ease-out;}
+.slide-in-left {opacity:0; transform:translateX(-50px); transition: all 0.8s ease-out;}
+.slide-in-right {opacity:0; transform:translateX(50px); transition: all 0.8s ease-out;}
+.show {opacity:1; transform:translateX(0) translateY(0);}
+
+/* PRZYCISKI OFERTY – NOWOCZEŚNIEJ */
+.services-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.services-buttons .btn {
+  background: linear-gradient(135deg, #facc15, #f3c13a);
+  color: #111;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.services-buttons .btn:hover {
+  background: linear-gradient(135deg, #f3c13a, #facc15);
+  color: #111;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  border-color: #facc15;
+}
+
+/* Dropdown w headerze */
+.dropdown {position:relative; display:inline-block;}
+.dropbtn {color:white; padding:0 10px; height:100%; line-height:50px; cursor:pointer; display:inline-block; transition:0.3s;}
+.dropbtn:hover {color:#facc15;}
+.dropdown-content {
+  display:none;
+  position:absolute;
+  background:#111;
+  min-width:220px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+  z-index:200;
+  flex-direction:column;
+  border-radius:6px;
+  overflow:hidden;
+}
+.dropdown-content a {
+  color:white;
+  padding:10px 15px;
+  text-decoration:none;
+  display:block;
+  transition:0.3s;
+}
+.dropdown-content a:hover {background:#facc15; color:#111;}
+.dropdown.show .dropdown-content {display:flex; flex-direction:column;}
+
+.contact p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333; /* ciemniejszy odcień dla lepszej czytelności */
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-weight: 500; /* lekko pogrubione dla lepszej widoczności */
+}
+.contact p strong {
+  color: #facc15; /* wyróżnienie kontaktu */
+}
+
 </style>
 </head>
 <body>
@@ -64,43 +156,98 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
 <header>
   <div class="container">
     <div class="logo">DIAMENT BUD</div>
-    <nav>
-      <a href="#hero">Strona główna</a>
-      <a href="#oferta">Oferta</a>
+<nav>
+  <a href="#hero">Strona główna</a>
+  <a href="#about">O firmie</a>
+  <a href="#features">Atuty</a>
+  
+  <div class="dropdown">
+    <a href="#services" class="dropbtn">Oferta ▾</a>
+    <div class="dropdown-content">
+      <a href="#ciecie">Cięcie diamentowe betonu i żelbetu</a>
+      <a href="#wiercenie">Wiercenie diamentowe otworów</a>
+      <a href="#demontaz-sciany">Demontaż ściany betonowej</a>
+      <a href="#demontaz-posadzki">Demontaż posadzki betonowej</a>
+      <a href="#demontaz-domu">Demontaż domu</a>
+      <a href="#wzmocnienia">Wzmocnienie konstrukcji betonowych włóknem węglowym</a>
+      <a href="#fundamenty">Wylewanie fundamentu monolitycznego</a>
+      <a href="#stropy">Stropy monolityczne</a>
+      <a href="#balkony">Demontaż balkonów</a>
+      <a href="#drobne-prace">Drobne prace budowlane▾</a>
+      <a href="#schody">Likwidacja schodów</a>
+      <a href="#okna">Demontaż okien</a>
+      <a href="#oscieznice">Demontaż ościeżnic</a>
+      <a href="#grzejniki">Demontaż grzejników</a>
+      <a href="#bruzdowanie">Bruzdowanie</a>
+      <a href="#podlogi">Zrywanie podłóg</a>
+      <a href="#skuwanie">Skuwanie</a>
+      <a href="#wyburzanie">Wyburzanie ścian</a>
+      <a href="#wiercenie2">Wiercenie</a>
       <a href="#cennik">Cennik</a>
-      <a href="#kontakt-section">Kontakt</a>
-    </nav>
+    </div>
+  </div>
+
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
   </div>
 </header>
 
-<section id="hero" class="hero">
+<!-- HERO -->
+<section class="hero fade-in" id="hero">
   <h1>Nowoczesne prace diamentowe i wyburzenia</h1>
   <p>Profesjonalne cięcie i wiercenie betonu oraz żelbetu – dokładnie, szybko i bezpiecznie.</p>
-  <a class="btn" href="#oferta">Zobacz ofertę</a>
-  <a class="btn secondary" href="#kontakt-section">Zadzwoń</a>
+  <a class="btn" href="#services">Zobacz ofertę</a>
+  <a class="btn secondary" href="#kontakt">Zadzwoń</a>
 </section>
 
-<section id="about" class="section">
-  <h2>O naszej firmie</h2>
-  <p>
-    Działamy od 2015 roku. Nasi fachowcy mają wieloletnie doświadczenie, a nowoczesny sprzęt pozwala wykonywać prace precyzyjnie i szybko. Dbamy o bezpieczeństwo i najwyższą jakość usług w całej Polsce.
-  </p>
+<!-- O NASZEJ FIRMIE -->
+<section class="about fade-in" id="about">
+  <div class="container">
+    <div class="about-text slide-in-left">
+      <h2>O naszej firmie</h2>
+      <p>Działamy od 2015 roku, a nasz zespół tworzą doświadczeni specjaliści z ponad 10-letnim doświadczeniem w pracach diamentowych i wyburzeniowych.</p>
+      <p>Stawiamy na profesjonalizm i najwyższe standardy bezpieczeństwa. Dzięki nowoczesnemu sprzętowi wykonujemy wszystkie prace samodzielnie, bez pośredników, co przyspiesza realizację projektów.</p>
+      <h3>Nasze usługi obejmują:</h3>
+      <ul>
+        <li>Cięcia diamentowe</li>
+        <li>Cięcie posadzek przemysłowych</li>
+        <li>Cięcie asfaltu</li>
+        <li>Cięcie szczelin dylatacyjnych</li>
+        <li>Osadzanie kotew chemicznych</li>
+        <li>Prace wyburzeniowe i rozbiórkowe</li>
+        <li>Zrywanie podłóg – klepka, deski, panele</li>
+        <li>Wiercenie otworów koronami diamentowymi</li>
+        <li>Wzmacnianie konstrukcji włóknem węglowym i szklanym</li>
+        <li>Fundamenty żelbetonowe</li>
+      </ul>
+      <div class="stats">
+        <div><h3>2015</h3><p>Rok rozpoczęcia</p></div>
+        <div><h3>900+</h3><p>Zleceń zrealizowanych</p></div>
+        <div><h3>10+</h3><p>Lat doświadczenia</p></div>
+      </div>
+    </div>
+    <div class="about-image slide-in-right">
+      <img src="images/dwa.png" alt="O naszej firmie">
+    </div>
+  </div>
 </section>
 
-<section id="features" class="section">
+<!-- ATUTY -->
+<section class="features fade-in" id="features">
   <h2>Dlaczego warto nas wybrać</h2>
-  <div class="features">
-    <div class="feature">
+  <div class="features-grid">
+    <div class="feature slide-in-left">
       <img src="https://img.icons8.com/ios-filled/100/000000/machine.png" alt="Sprzęt">
       <h3>Nowoczesny sprzęt</h3>
       <p>Urządzenia wysokiej klasy, które zwiększają efektywność pracy.</p>
     </div>
-    <div class="feature">
+    <div class="feature fade-in">
       <img src="https://img.icons8.com/ios-filled/100/000000/time-machine.png" alt="Termin">
       <h3>Szybkie wykonanie</h3>
       <p>Prace zawsze w terminie, bez opóźnień.</p>
     </div>
-    <div class="feature">
+    <div class="feature slide-in-right">
       <img src="https://img.icons8.com/ios-filled/100/000000/security-checked.png" alt="BHP">
       <h3>Bezpieczeństwo</h3>
       <p>Zachowujemy najwyższe standardy BHP podczas wszystkich prac.</p>
@@ -108,34 +255,56 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   </div>
 </section>
 
-<section id="oferta" class="section">
+<!-- USŁUGI -->
+<section class="services fade-in" id="services">
   <h2>Nasza oferta</h2>
-  <div class="services">
-    <div class="card"><h3>Diamentowe wiercenie</h3><p>Otwory w betonie i żelbecie o dowolnych średnicach.</p></div>
-    <div class="card"><h3>Diamentowe cięcie</h3><p>Precyzyjne cięcie betonu i innych materiałów.</p></div>
-    <div class="card"><h3>Wyburzenia</h3><p>Rozbiórki i demontaż elementów konstrukcyjnych.</p></div>
-    <div class="card"><h3>Wzmocnienia konstrukcji</h3><p>Wzmocnienie elementów betonowych nowoczesnymi metodami.</p></div>
-    <div class="card"><h3>Cięcie posadzek i asfaltu</h3><p>Dokładne cięcia na halach, drogach i marketach.</p></div>
-    <div class="card"><h3>Demontaż balkonów</h3><p>Bezpieczny demontaż balkonów żelbetowych.</p></div>
+
+  <!-- PRZYCISKI OFERTY -->
+  <div class="services-buttons" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:40px;">
+    <a href="#ciecie-diamentowe" class="btn">Cięcie diamentowe betonu i żelbetu</a>
+    <a href="#wiercenie-diamentowe" class="btn">Wiercenie diamentowe otworów</a>
+    <a href="#demontaz-sciany" class="btn">Demontaż ściany betonowej</a>
+    <a href="#demontaz-posadzki" class="btn">Demontaż posadzki betonowej</a>
+    <a href="#demontaz-domu" class="btn">Demontaż domu</a>
+    <a href="#wzmocnienie-konstrukcji" class="btn">Wzmocnienie konstrukcji betonowych włóknem węglowym</a>
+    <a href="#wylewanie-fundamentu" class="btn">Wylewanie fundamentu monolitycznego</a>
+    <a href="#stropy-monolityczne" class="btn">Stropy monolityczne</a>
+    <a href="#demontaz-balkonow" class="btn">Demontaż balkonów</a>
+    <a href="#drobne-prace" class="btn">Drobne prace budowlane▾</a>
+    <a href="#likwidacja-schodow" class="btn">Likwidacja schodów</a>
+    <a href="#demontaz-okien" class="btn">Demontaż okien</a>
+    <a href="#demontaz-oscieznic" class="btn">Demontaż ościeżnic</a>
+    <a href="#demontaz-grzejnikow" class="btn">Demontaż grzejników</a>
+    <a href="#bruzdowanie" class="btn">Bruzdowanie</a>
+    <a href="#zrywanie-podlog" class="btn">Zrywanie podłóg</a>
+    <a href="#skuwnanie" class="btn">Skuwanie</a>
+    <a href="#wyburzanie-scian" class="btn">Wyburzanie ścian</a>
+    <a href="#wiercenie" class="btn">Wiercenie</a>
+    <a href="#cennik" class="btn">Cennik</a>
+  </div>
+
+  <div class="services-grid">
+    ...
   </div>
 </section>
 
-<section class="section">
-  <h2>Nasze liczby</h2>
-  <div class="stats">
-    <div class="stat"><h3>2015</h3><p>Rok rozpoczęcia działalności</p></div>
-    <div class="stat"><h3>900+</h3><p>Zleceń zrealizowanych</p></div>
-    <div class="stat"><h3>10+</h3><p>Lat doświadczenia zespołu</p></div>
-  </div>
+
+<!-- STATYSTYKI -->
+<section class="stats fade-in">
+  <div class="stat slide-in-left"><h3>2015</h3><p>Rok rozpoczęcia działalności</p></div>
+  <div class="stat fade-in"><h3>900+</h3><p>Zleceń zrealizowanych</p></div>
+  <div class="stat slide-in-right"><h3>10+</h3><p>Lat doświadczenia zespołu</p></div>
 </section>
 
-<section id="kontakt-section" class="section">
+<!-- KONTAKT -->
+<section class="contact fade-in" id="kontakt">
   <h2>Kontakt</h2>
-  <p>Email: 12345@example.com<br>
-     Tel: +48 123 456 789<br>
-     Godziny: 07:00 – 20:00<br>
-     Obsługujemy całą Polskę
-  </p>
+  <p>
+Masz pytania dotyczące naszych usług diamentowych i wyburzeniowych? Skontaktuj się z nami!<br>
+Odpowiadamy szybko i fachowo na wszystkie zapytania.<br>
+<strong>Email:</strong> 12345@example.com &nbsp; | &nbsp; <strong>Tel:</strong> +48 123 456 789<br>
+Godziny pracy: 07:00 – 20:00
+</p>
   <form class="contact-form" onsubmit="event.preventDefault(); alert('Dziękujemy — wysłano!');">
     <input type="text" placeholder="Imię i nazwisko" required>
     <input type="tel" placeholder="Telefon" required>
@@ -147,7 +316,104 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
 
 <footer>
   © 2026 DIAMENT BUD
+  <div style="margin-top:15px; display:flex; justify-content:center; gap:20px;">
+    <a href="polityka.html" class="btn secondary">Polityka prywatności</a>
+    <a href="cookies.html" class="btn secondary">Cookies</a>
+  </div>
 </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right");
+
+  function checkPosition() {
+    const windowHeight = window.innerHeight;
+    elements.forEach(el => {
+      const position = el.getBoundingClientRect().top;
+      if(position < windowHeight - 100){
+        el.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkPosition);
+  checkPosition();
+});
+</script>
+
+<script>
+const dropdown = document.querySelector(".dropdown");
+const dropbtn = document.querySelector(".dropbtn");
+
+dropbtn.addEventListener("click", function(e){
+  e.preventDefault();
+  dropdown.classList.toggle("show");
+});
+
+// kliknięcie poza menu zamyka dropdown
+window.addEventListener("click", function(e){
+  if(!dropdown.contains(e.target)){
+    dropdown.classList.remove("show");
+  }
+});
+</script>
+
+<!-- POPUP COOKIES -->
+<div id="cookie-popup" style="
+  position:fixed;
+  bottom:-100px; /* start poza ekranem */
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  max-width:500px;
+  background:#111;
+  color:white;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  z-index:1000;
+  transition: bottom 0.5s ease-out;
+">
+  <span>Ta strona używa cookies. Akceptujesz ich użycie?</span>
+  <div style="margin-top:10px;">
+    <button id="accept-cookies" style="background:#facc15; color:#111; border:none; padding:10px 20px; margin-right:10px; border-radius:6px; cursor:pointer;">Akceptuję</button>
+    <button id="reject-cookies" style="background:#555; color:white; border:none; padding:10px 20px; border-radius:6px; cursor:pointer;">Odrzucam</button>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("cookie-popup");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const rejectBtn = document.getElementById("reject-cookies");
+  const form = document.querySelector(".contact-form");
+  const submitBtn = form.querySelector("button[type='submit']");
+
+  // blokada wysyłania formularza
+  submitBtn.disabled = true;
+
+  // wylot popupu z dołu po 0.5s
+  setTimeout(() => {
+    popup.style.bottom = "30px"; // tutaj ustaw, jak wysoko od dołu ma stać
+  }, 500);
+
+  acceptBtn.addEventListener("click", function() {
+    popup.style.bottom = "-150px"; // zniknięcie w dół
+    submitBtn.disabled = false;
+  });
+
+  rejectBtn.addEventListener("click", function() {
+    alert("Nie możesz wysłać formularza bez akceptacji cookies.");
+    submitBtn.disabled = true;
+  });
+});
+</script>
+
 
 </body>
 </html>
