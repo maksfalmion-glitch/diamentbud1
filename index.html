@@ -192,17 +192,19 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   color: #111;
 }
 
-<style>
-/* DROPDOWN W HEADERZE – poprawiony */
+/* DROPDOWN W HEADERZE – działa i nie wylatuje */
 .dropdown { position: relative; display: inline-block; max-width: 100%; }
+.dropbtn { color:white; padding:0 10px; height:100%; line-height:50px; cursor:pointer; display:inline-block; transition:0.3s;}
+.dropbtn:hover { color:#facc15; }
+
 #services-dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   min-width: 220px;
-  max-width: 90vw;      /* nie wylatuje poza ekran */
-  max-height: 250px;
+  max-width: 90vw;
+  max-height: 300px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background: #111;
@@ -210,19 +212,21 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   z-index: 200;
 }
+
 #services-dropdown a {
   display: block;
   padding: 10px 15px;
-  color: white;           /* białe linki */
+  color: white;
   border-bottom: 1px solid #333;
   text-decoration: none;
 }
+
 #services-dropdown a:hover {
   background: #facc15;
   color: #111;
 }
 
-/* MOBILE */
+/* MOBILE – dropdown pełen szerokości ekranu */
 @media (max-width: 768px) {
   #services-dropdown {
     position: fixed;
@@ -233,7 +237,6 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
     max-height: 300px;
   }
 }
-</style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -245,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
     dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
   });
 
+  // kliknięcie poza menu zamyka dropdown
   window.addEventListener("click", function(e){
     if(!dropdown.contains(e.target) && e.target !== dropdownBtn){
       dropdown.style.display = "none";
@@ -541,6 +545,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
 
 
 
