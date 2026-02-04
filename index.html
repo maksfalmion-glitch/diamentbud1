@@ -149,6 +149,30 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   color: #facc15; /* wyróżnienie kontaktu */
 }
 
+  /* RESPONSYWNOŚĆ MOBILE */
+@media (max-width: 768px) {
+  header .container {flex-direction: column; gap: 10px; text-align: center;}
+  header nav a {margin: 5px; display: inline-block;}
+
+  .hero {padding: 80px 20px;}
+  .hero h1 {font-size: 32px;}
+  .hero p {font-size: 18px;}
+  .hero .btn {padding: 12px 24px; margin: 5px 0; font-size: 16px;}
+
+  .about .container {flex-direction: column; gap: 30px;}
+  .about-text {padding-right: 0;}
+  .about-image img {max-width: 100%;}
+
+  .features-grid,
+  .services-grid,
+  .stats {grid-template-columns: 1fr;}
+  .feature, .card, .stat {margin: 0 auto; max-width: 350px;}
+
+  .contact-form {width: 100%; padding: 20px;}
+  .contact-form input, .contact-form textarea {font-size: 16px; padding: 12px;}
+  .contact-form button {font-size: 16px; padding: 12px;}
+}
+
 </style>
 </head>
 <body>
@@ -417,3 +441,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
