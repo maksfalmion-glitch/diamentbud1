@@ -485,18 +485,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const dropbtn = document.querySelector(".dropbtn");
-  const dropdown = document.querySelector(".dropdown");
+  const dropdownBtn = document.getElementById("dropdown-btn");
+  const dropdown = document.getElementById("services-dropdown");
 
-  dropbtn.addEventListener("click", function(e){
-    e.preventDefault(); // blokuje domyślne działanie linku
-    dropdown.classList.toggle("show"); // pokaz/ukryj menu
+  dropdownBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
   });
 
   // kliknięcie poza menu zamyka dropdown
   window.addEventListener("click", function(e){
-    if(!dropdown.contains(e.target)){
-      dropdown.classList.remove("show");
+    if(!dropdown.contains(e.target) && e.target !== dropdownBtn){
+      dropdown.style.display = "none";
     }
   });
 });
@@ -504,6 +504,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
 
 
 
