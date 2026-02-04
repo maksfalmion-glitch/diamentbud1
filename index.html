@@ -255,6 +255,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+  const closeBtn = document.getElementById("close-dropdown");
+closeBtn.addEventListener("click", function(){
+  dropdown.style.display = "none";
+});
+
 </script>
 
 
@@ -274,6 +279,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="dropdown">
   <a href="#" id="dropdown-btn">Oferta ▾</a>
   <div id="services-dropdown">
+    <div style="text-align:right; padding:5px 10px;">
+      <span id="close-dropdown" style="cursor:pointer; font-size:18px; color:#facc15;">&times;</span>
+    </div>
     <a href="#ciecie">Cięcie diamentowe betonu i żelbetu</a>
     <a href="#wiercenie">Wiercenie diamentowe otworów</a>
     <a href="#demontaz-sciany">Demontaż ściany betonowej</a>
@@ -545,6 +553,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
 
 
 
