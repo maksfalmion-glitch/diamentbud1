@@ -173,6 +173,25 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   .contact-form button {font-size: 16px; padding: 12px;}
 }
 
+  /* MENU OFERTA MOBILE SCROLL */
+#services-dropdown {
+  max-height: 250px; /* wysokość, w której zaczyna scrollować */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* płynny scroll na iOS */
+}
+
+#services-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  color: #111;
+}
+
+#services-dropdown a:hover {
+  background: #facc15;
+  color: #111;
+}
+
 </style>
 </head>
 <body>
@@ -441,4 +460,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
 
