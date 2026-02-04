@@ -192,6 +192,31 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   color: #111;
 }
 
+  /* DROPDOWN MENU */
+.dropdown {position:relative; display:inline-block;}
+#services-dropdown {
+  display:none;
+  position:absolute;
+  background:white;
+  min-width:220px;
+  max-height:250px;  /* wysokość do scrolla */
+  overflow-y:auto;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  z-index:200;
+  border-radius:6px;
+}
+#services-dropdown a {
+  display:block;
+  padding:10px 15px;
+  color:#111;
+  border-bottom:1px solid #eee;
+  text-decoration:none;
+}
+#services-dropdown a:hover {
+  background:#facc15;
+  color:#111;
+}
+
 </style>
 </head>
 <body>
@@ -204,31 +229,32 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   <a href="#about">O firmie</a>
   <a href="#features">Atuty</a>
   
-  <div class="dropdown">
-    <a href="#services" class="dropbtn">Oferta ▾</a>
-    <div class="dropdown-content">
-      <a href="#ciecie">Cięcie diamentowe betonu i żelbetu</a>
-      <a href="#wiercenie">Wiercenie diamentowe otworów</a>
-      <a href="#demontaz-sciany">Demontaż ściany betonowej</a>
-      <a href="#demontaz-posadzki">Demontaż posadzki betonowej</a>
-      <a href="#demontaz-domu">Demontaż domu</a>
-      <a href="#wzmocnienia">Wzmocnienie konstrukcji betonowych włóknem węglowym</a>
-      <a href="#fundamenty">Wylewanie fundamentu monolitycznego</a>
-      <a href="#stropy">Stropy monolityczne</a>
-      <a href="#balkony">Demontaż balkonów</a>
-      <a href="#drobne-prace">Drobne prace budowlane▾</a>
-      <a href="#schody">Likwidacja schodów</a>
-      <a href="#okna">Demontaż okien</a>
-      <a href="#oscieznice">Demontaż ościeżnic</a>
-      <a href="#grzejniki">Demontaż grzejników</a>
-      <a href="#bruzdowanie">Bruzdowanie</a>
-      <a href="#podlogi">Zrywanie podłóg</a>
-      <a href="#skuwanie">Skuwanie</a>
-      <a href="#wyburzanie">Wyburzanie ścian</a>
-      <a href="#wiercenie2">Wiercenie</a>
-      <a href="#cennik">Cennik</a>
-    </div>
+  <!-- MENU OFERTA Z DROPDOWN -->
+<div class="dropdown">
+  <a href="#" id="dropdown-btn">Oferta ▾</a>
+  <div id="services-dropdown">
+    <a href="#ciecie">Cięcie diamentowe betonu i żelbetu</a>
+    <a href="#wiercenie">Wiercenie diamentowe otworów</a>
+    <a href="#demontaz-sciany">Demontaż ściany betonowej</a>
+    <a href="#demontaz-posadzki">Demontaż posadzki betonowej</a>
+    <a href="#demontaz-domu">Demontaż domu</a>
+    <a href="#wzmocnienia">Wzmocnienie konstrukcji betonowych włóknem węglowym</a>
+    <a href="#fundamenty">Wylewanie fundamentu monolitycznego</a>
+    <a href="#stropy">Stropy monolityczne</a>
+    <a href="#balkony">Demontaż balkonów</a>
+    <a href="#drobne">Drobne prace budowlane▾</a>
+    <a href="#schody">Likwidacja schodów</a>
+    <a href="#okna">Demontaż okien</a>
+    <a href="#oscieznice">Demontaż ościeżnic</a>
+    <a href="#grzejniki">Demontaż grzejników</a>
+    <a href="#bruzdowanie">Bruzdowanie</a>
+    <a href="#podlogi">Zrywanie podłóg</a>
+    <a href="#skuwanie">Skuwanie</a>
+    <a href="#wyburzanie">Wyburzanie ścian</a>
+    <a href="#wiercenie2">Wiercenie</a>
+    <a href="#cennik">Cennik</a>
   </div>
+</div>
 
   <a href="#kontakt">Kontakt</a>
 </nav>
@@ -457,8 +483,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<script>
+const dropdownBtn = document.getElementById('dropdown-btn');
+const dropdown = document.getElementById('services-dropdown');
+
+dropdownBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+});
+
+// Zamknięcie dropdown po kliknięciu poza nim
+document.addEventListener('click', function(e){
+  if(!dropdown.contains(e.target) && e.target !== dropdownBtn){
+    dropdown.style.display = 'none';
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
