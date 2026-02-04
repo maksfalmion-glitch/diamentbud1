@@ -484,24 +484,27 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <script>
-const dropdownBtn = document.getElementById('dropdown-btn');
-const dropdown = document.getElementById('services-dropdown');
+document.addEventListener("DOMContentLoaded", function() {
+  const dropbtn = document.querySelector(".dropbtn");
+  const dropdown = document.querySelector(".dropdown");
 
-dropdownBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-});
+  dropbtn.addEventListener("click", function(e){
+    e.preventDefault(); // blokuje domyślne działanie linku
+    dropdown.classList.toggle("show"); // pokaz/ukryj menu
+  });
 
-// Zamknięcie dropdown po kliknięciu poza nim
-document.addEventListener('click', function(e){
-  if(!dropdown.contains(e.target) && e.target !== dropdownBtn){
-    dropdown.style.display = 'none';
-  }
+  // kliknięcie poza menu zamyka dropdown
+  window.addEventListener("click", function(e){
+    if(!dropdown.contains(e.target)){
+      dropdown.classList.remove("show");
+    }
+  });
 });
 </script>
 
 </body>
 </html>
+
 
 
 
