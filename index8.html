@@ -13,53 +13,54 @@ ul {padding-left:20px; list-style: disc;}
 
 /* HEADER */
 header {background:#111; color:white; padding:15px 0; position:sticky; top:0; z-index:100; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
-header .container {display:flex; justify-content:space-between; align-items:center;}
+header .container {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;}
 header .logo {font-size:26px; font-weight:bold; color:#facc15;}
-header nav a {color:white; margin-left:20px; font-weight:500; transition:0.3s;}
+header nav {display:flex; flex-wrap:wrap;}
+header nav a {color:white; margin-left:20px; margin-top:5px; font-weight:500; transition:0.3s;}
 header nav a:hover {color:#facc15;}
 
 /* HERO */
-.hero {background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/trzy.png') center/cover no-repeat; color:white; text-align:center; padding:120px 20px;}
-.hero h1 {font-size:50px; margin-bottom:20px; text-shadow: 1px 1px 5px rgba(0,0,0,0.7);}
-.hero p {font-size:22px; margin-bottom:30px;}
-.hero .btn {background:#facc15; color:#111; padding:16px 32px; font-weight:bold; border-radius:6px; transition:0.3s;}
+.hero {background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/trzy.png') center/cover no-repeat; color:white; text-align:center; padding:80px 20px;}
+.hero h1 {font-size:36px; margin-bottom:20px; text-shadow:1px 1px 5px rgba(0,0,0,0.7);}
+.hero p {font-size:18px; margin-bottom:20px;}
+.hero .btn {background:#facc15; color:#111; padding:12px 24px; font-weight:bold; border-radius:6px; transition:0.3s;}
 .hero .btn:hover {opacity:0.85;}
 .hero .btn.secondary {background:transparent; border:2px solid #facc15; color:white;}
 
 /* SEKCJA TEKSTOWA */
-.section-content {padding:60px 20px; background:#fff;}
-.section-content h2 {font-size:36px; margin-bottom:25px; color:#111;}
-.section-content h3 {font-size:24px; color:#111; margin-bottom:15px;}
-.section-content p, .section-content li {color:#555; line-height:1.8;}
+.section-content {padding:40px 20px; background:#fff;}
+.section-content h2 {font-size:28px; margin-bottom:20px; color:#111;}
+.section-content h3 {font-size:22px; color:#111; margin-bottom:12px;}
+.section-content p, .section-content li {color:#555; line-height:1.6; font-size:16px;}
 .section-content ul {list-style:none; padding:0 0 0 20px;}
 .section-content ul li::before {content:"•"; color:#facc15; display:inline-block; width:20px;}
 
 /* KARUZELA */
-.carousel-section {padding:40px 0; background:#f7f7f7;}
-.carousel-container {position: relative; width:90%; max-width:1200px; margin:auto; overflow:hidden;}
-.carousel-track {display:flex; transition: transform 0.5s ease-in-out; gap:15px;}
+.carousel-section {padding:20px 0; background:#f7f7f7;}
+.carousel-container {position: relative; width:100%; max-width:1200px; margin:auto; overflow:hidden;}
+.carousel-track {display:flex; transition: transform 0.4s ease-in-out; gap:15px;}
 .carousel-item {flex:0 0 calc(33.333% - 10px);}
-.carousel-item img {width:100%; height:200px; object-fit:cover; border-radius:12px; display:block;}
-.carousel-btn {position:absolute; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.5); color:white; border:none; font-size:28px; padding:10px 15px; cursor:pointer; border-radius:50%; z-index:10;}
+.carousel-item img {width:100%; height:150px; object-fit:cover; border-radius:12px; display:block;}
+.carousel-btn {position:absolute; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.5); color:white; border:none; font-size:24px; padding:8px 12px; cursor:pointer; border-radius:50%; z-index:10;}
 .carousel-btn.prev {left:5px;}
 .carousel-btn.next {right:5px;}
 @media screen and (max-width:768px) {.carousel-item {flex:0 0 calc(50% - 10px);}}
 @media screen and (max-width:480px) {.carousel-item {flex:0 0 100%;}}
 
 /* KONTAKT */
-.contact {padding:80px 20px; background:#f7f7f7;}
-.contact h2 {text-align:center; font-size:36px; margin-bottom:35px; color:#111;}
-.contact-info {background:#facc15; color:#111; text-align:center; padding:25px 20px; border-radius:12px; margin-bottom:30px; font-size:18px; font-weight:600;}
+.contact {padding:40px 20px; background:#f7f7f7;}
+.contact h2 {text-align:center; font-size:28px; margin-bottom:25px; color:#111;}
+.contact-info {background:#facc15; color:#111; text-align:center; padding:20px; border-radius:12px; margin-bottom:20px; font-size:16px; font-weight:600;}
 .contact-info strong {color:#111;}
-.contact-form {background:white; padding:30px; border-radius:12px; box-shadow:0 4px 25px rgba(0,0,0,0.1); max-width:600px; margin:auto;}
-.contact-form input, .contact-form textarea {width:100%; padding:14px; margin-bottom:18px; border:1px solid #ccc; border-radius:6px; transition:0.3s;}
+.contact-form {background:white; padding:20px; border-radius:12px; box-shadow:0 4px 25px rgba(0,0,0,0.1); max-width:600px; margin:auto;}
+.contact-form input, .contact-form textarea {width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px; transition:0.3s; font-size:14px;}
 .contact-form input:focus, .contact-form textarea:focus {border-color:#facc15; outline:none;}
-.contact-form button {background:#111; color:white; padding:16px; border:none; width:100%; font-size:18px; cursor:pointer; border-radius:6px; transition:0.3s;}
+.contact-form button {background:#111; color:white; padding:14px; border:none; width:100%; font-size:16px; cursor:pointer; border-radius:6px; transition:0.3s;}
 .contact-form button:hover {background:#000;}
 
 /* FOOTER */
-footer {background:#111; color:white; text-align:center; padding:35px; margin-top:60px; font-size:14px;}
-footer .btn.secondary {background:transparent; border:2px solid #facc15; color:white; padding:8px 15px; border-radius:6px; margin:5px;}
+footer {background:#111; color:white; text-align:center; padding:25px; margin-top:40px; font-size:14px;}
+footer .btn.secondary {background:transparent; border:2px solid #facc15; color:white; padding:6px 12px; border-radius:6px; margin:3px;}
 </style>
 </head>
 <body>
@@ -78,7 +79,7 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 <section class="hero">
   <h1>Wylewanie fundamentu monolitycznego</h1>
   <p>Precyzyjne i trwałe fundamenty dla Twojej inwestycji.</p>
-  <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+  <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
     <a class="btn" href="index2.html">Zobacz ofertę</a>
     <a class="btn secondary" href="index.html#kontakt">Kontakt</a>
   </div>
@@ -88,6 +89,7 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
   <div class="container">
     <h2>Główna / Prace monolityczne / Wylewanie fundamentu monolitycznego</h2>
     <p>Niezależnie od tego, czy budujemy dom jednopiętrowy, czy wielkondygnacyjny, fundament to podstawa każdego budynku. To on przenosi obciążenia i zapewnia stabilność konstrukcji przez lata.</p>
+
     <h3>Specyfika fundamentu monolitycznego</h3>
     <ul>
       <li>Jednolita wylewka betonu o dużej nośności</li>
@@ -96,7 +98,8 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
       <li>Integralna konstrukcja odporna na odkształcenia</li>
       <li>Możliwość użycia jako szorstka podłoga w halach czy magazynach</li>
     </ul>
-    <h3>Etapy budowy fundamentu monolitycznego:</h3>
+
+    <h3>Etapy budowy fundamentu monolitycznego</h3>
     <ul>
       <li>Ocena placu budowy i gruntu</li>
       <li>Obliczenia grubości płyty, warstwy drenażowej i ilości zbrojenia</li>
@@ -104,19 +107,8 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
       <li>Montaż deskowania i ciągłe wylewanie betonu</li>
       <li>Kontrola jakości i ewentualne poprawki</li>
     </ul>
+
     <p>Profesjonalna realizacja gwarantuje trwałość fundamentu na długie lata i minimalizuje ryzyko osiadania czy pękania.</p>
-    <h3>Gdzie zamówić wylewanie fundamentu monolitycznego?</h3>
-    <p>Firma DIAMANDBUD realizuje projekty fundamentów w Wrocławiu i okolicach. Podejmujemy się trudnych projektów, na gruntach o niskiej nośności oraz w warunkach wymagających precyzji i doświadczenia.</p>
-    <p>Oferujemy projekt fundamentu, jego realizację, a także pełne wsparcie techniczne i doradztwo w trakcie całego procesu budowy.</p>
-    <h3>Zalety współpracy z nami:</h3>
-    <ul>
-      <li>Wykwalifikowana i doświadczona kadra</li>
-      <li>Dostęp do nowoczesnego sprzętu</li>
-      <li>Umowa z harmonogramem prac</li>
-      <li>Profesjonalna kontrola jakości fundamentów</li>
-      <li>Terminowa realizacja</li>
-      <li>Gwarancja solidnych fundamentów</li>
-    </ul>
   </div>
 </section>
 
@@ -125,9 +117,9 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
   <div class="carousel-container">
     <button class="carousel-btn prev">&#10094;</button>
     <div class="carousel-track">
-      <div class="carousel-item"><img src="images/trzy.png" alt="Zdjęcie 1"></div>
-      <div class="carousel-item"><img src="images/dwa.png" alt="Zdjęcie 2"></div>
-      <div class="carousel-item"><img src="images/szkolenie.jpg" alt="Zdjęcie 3"></div>
+      <div class="carousel-item"><img src="images/photo1.png" alt="Zdjęcie 1"></div>
+      <div class="carousel-item"><img src="images/photo2.png" alt="Zdjęcie 2"></div>
+      <div class="carousel-item"><img src="images/photo3.png" alt="Zdjęcie 3"></div>
       <div class="carousel-item"><img src="images/cztery.png" alt="Zdjęcie 4"></div>
     </div>
     <button class="carousel-btn next">&#10095;</button>
@@ -160,19 +152,30 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 
 <script>
 const track = document.querySelector('.carousel-track');
-const nextBtn = document.querySelector('.carousel-btn.next');
+const items = Array.from(document.querySelectorAll('.carousel-item'));
 const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
 let index = 0;
+
+function updateCarousel() {
+  const itemWidth = items[0].getBoundingClientRect().width + 15; // gap
+  track.style.transform = `translateX(-${index * itemWidth}px)`;
+}
+
 nextBtn.addEventListener('click', () => {
-  const items = document.querySelectorAll('.carousel-item');
-  if(index < items.length - 3) index++;
-  track.style.transform = `translateX(-${index * (100/3 + 15/track.offsetWidth*100)}%)`;
+  const visible = Math.floor(track.parentElement.offsetWidth / (items[0].offsetWidth + 15));
+  if(index < items.length - visible) index++;
+  updateCarousel();
 });
+
 prevBtn.addEventListener('click', () => {
   if(index > 0) index--;
-  track.style.transform = `translateX(-${index * (100/3 + 15/track.offsetWidth*100)}%)`;
+  updateCarousel();
 });
+
+window.addEventListener('resize', updateCarousel);
 </script>
 
 </body>
 </html>
+
