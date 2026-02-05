@@ -58,6 +58,22 @@ header nav a:hover {color:#facc15;}
 /* FOOTER */
 footer {background:#111; color:white; text-align:center; padding:35px; margin-top:60px; font-size:14px;}
 footer .btn.secondary {background:transparent; border:2px solid #facc15; color:white; padding:8px 15px; border-radius:6px; margin:5px;}
+
+  .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .hero-buttons a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -76,8 +92,10 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 <section class="hero">
   <h1>Demontaż domu</h1>
   <p>Profesjonalny rozbiór i demontaż domów prywatnych i budynków publicznych.</p>
+  <div class="hero-buttons">
   <a class="btn" href="index.html#services">Zobacz ofertę</a>
   <a class="btn secondary" href="index.html#kontakt">Kontakt</a>
+</div>
 </section>
 
 <section class="section-content">
@@ -136,3 +154,4 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 
 </body>
 </html>
+
