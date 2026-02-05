@@ -59,6 +59,13 @@ header nav a:hover {color:#facc15;}
 footer {background:#111; color:white; text-align:center; padding:35px; margin-top:60px; font-size:14px;}
 footer .btn.secondary {background:transparent; border:2px solid #facc15; color:white; padding:8px 15px; border-radius:6px; margin:5px;}
 
+  .hero-buttons {
+  display: flex;
+  justify-content: center; /* wyśrodkowanie przycisków */
+  gap: 15px; /* odstęp między przyciskami */
+  flex-wrap: wrap; /* jeśli ekran jest wąski, przyciski przejdą w dół */
+}
+
 </style>
 </head>
 <body>
@@ -77,9 +84,11 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 <section class="hero">
   <h1>Cięcie diamentowe betonu i żelbetu</h1>
   <p>Profesjonalne cięcie konstrukcji betonowych, precyzyjnie i bezpiecznie.</p>
+ <div class="hero-buttons">
   <a class="btn" href="index.html#services">Zobacz ofertę</a>
   <a class="btn secondary" href="index.html#kontakt">Kontakt</a>
-</section>
+</div>
+
 
 <section class="section-content">
   <div class="container">
@@ -158,4 +167,5 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 </body>
 
 </html>
+
 
