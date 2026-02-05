@@ -294,6 +294,16 @@ html, body {
   overflow-x: hidden;
 }
 
+  .stats .container div h2 {
+  font-size: 32px;
+  color: #facc15;
+}
+
+.stats .container div p {
+  font-size: 16px;
+  color: #111;
+}
+
 </style>
 </head>
 <body>
@@ -370,14 +380,19 @@ html, body {
         <li>Wzmacnianie konstrukcji włóknem węglowym i szklanym</li>
         <li>Fundamenty żelbetonowe</li>
       </ul>
-      <div class="stats">
-        <div><h3>2015</h3><p>Rok rozpoczęcia</p></div>
-        <div><h3>900+</h3><p>Zleceń zrealizowanych</p></div>
-        <div><h3>10+</h3><p>Lat doświadczenia</p></div>
-      </div>
+<section class="stats">
+  <div class="container" style="display:flex; justify-content:space-around; flex-wrap:wrap; text-align:center; padding:40px 0;">
+    <div style="flex:1 1 150px; margin:10px;">
+      <h2 style="font-size:32px; color:#facc15;">2015</h2>
+      <p>Rok rozpoczęcia</p>
     </div>
-    <div class="about-image slide-in-right">
-      <img src="images/dwa.png" alt="O naszej firmie">
+    <div style="flex:1 1 150px; margin:10px;">
+      <h2 style="font-size:32px; color:#facc15;">900+</h2>
+      <p>Zleceń zrealizowanych</p>
+    </div>
+    <div style="flex:1 1 150px; margin:10px;">
+      <h2 style="font-size:32px; color:#facc15;">10+</h2>
+      <p>Lat doświadczenia</p>
     </div>
   </div>
 </section>
@@ -606,6 +621,7 @@ window.addEventListener('click', (e) => {
 
 </body>
 </html>
+
 
 
 
