@@ -58,6 +58,22 @@ header nav a:hover {color:#facc15;}
 /* FOOTER */
 footer {background:#111; color:white; text-align:center; padding:35px; margin-top:60px; font-size:14px;}
 footer .btn.secondary {background:transparent; border:2px solid #facc15; color:white; padding:8px 15px; border-radius:6px; margin:5px;}
+
+  .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .hero-buttons a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -76,8 +92,10 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 <section class="hero" style="background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/trzy.png') center/cover no-repeat;">
   <h1>Demontaż posadzki betonowej</h1>
   <p>Profesjonalny demontaż wylewek betonowych, precyzyjnie i bezpiecznie.</p>
+  <div class="hero-buttons">
   <a class="btn" href="index.html#services">Zobacz ofertę</a>
   <a class="btn secondary" href="index.html#kontakt">Kontakt</a>
+</div>
 </section>
 
 
@@ -135,3 +153,4 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 
 </body>
 </html>
+
