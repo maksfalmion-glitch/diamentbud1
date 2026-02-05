@@ -8,11 +8,7 @@
 /* PODSTAWOWE */
 body {margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#333; background:#f7f7f7;}
 a {text-decoration:none;}
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
-}
+.container {width:90%; max-width:1200px; margin:auto;}
 
 /* HEADER */
 header {background:#111; color:white; padding:15px 0; position:sticky; top:0; z-index:100; box-shadow:0 2px 6px rgba(0,0,0,0.2);}
@@ -285,15 +281,6 @@ footer {background:#111; color:white; text-align:center; padding:35px; margin-to
   }
 }
 
-  * {
-  box-sizing: border-box;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 </style>
 </head>
 <body>
@@ -370,19 +357,14 @@ html, body {
         <li>Wzmacnianie konstrukcji włóknem węglowym i szklanym</li>
         <li>Fundamenty żelbetonowe</li>
       </ul>
-<section class="stats">
-  <div class="container" style="display:flex; justify-content:space-around; flex-wrap:wrap; text-align:center; padding:40px 0;">
-    <div style="flex:1 1 150px; margin:10px;">
-      <h2 style="font-size:32px; color:#facc15;">2015</h2>
-      <p>Rok rozpoczęcia</p>
+      <div class="stats">
+        <div><h3>2015</h3><p>Rok rozpoczęcia</p></div>
+        <div><h3>900+</h3><p>Zleceń zrealizowanych</p></div>
+        <div><h3>10+</h3><p>Lat doświadczenia</p></div>
+      </div>
     </div>
-    <div style="flex:1 1 150px; margin:10px;">
-      <h2 style="font-size:32px; color:#facc15;">900+</h2>
-      <p>Zleceń zrealizowanych</p>
-    </div>
-    <div style="flex:1 1 150px; margin:10px;">
-      <h2 style="font-size:32px; color:#facc15;">10+</h2>
-      <p>Lat doświadczenia</p>
+    <div class="about-image slide-in-right">
+      <img src="images/dwa.png" alt="O naszej firmie">
     </div>
   </div>
 </section>
@@ -468,10 +450,9 @@ Godziny pracy: 07:00 – 20:00
   </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 DIAMENT BUD
-  <div style="margin-top:15px; display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+  <div style="margin-top:15px; display:flex; justify-content:center; gap:20px;">
     <a href="polityka.html" class="btn secondary">Polityka prywatności</a>
     <a href="cookies.html" class="btn secondary">Cookies</a>
   </div>
@@ -517,7 +498,7 @@ window.addEventListener("click", function(e){
 <!-- POPUP COOKIES -->
 <div id="cookie-popup" style="
   position:fixed;
-  bottom:-200px; /* start poza ekranem */
+  bottom:-100px; /* start poza ekranem */
   left:50%;
   transform:translateX(-50%);
   width:90%;
@@ -531,7 +512,7 @@ window.addEventListener("click", function(e){
   flex-wrap:wrap;
   border-radius:12px;
   box-shadow:0 10px 30px rgba(0,0,0,0.3);
-  z-index:10000;
+  z-index:1000;
   transition: bottom 0.5s ease-out;
 ">
   <span>Ta strona używa cookies. Akceptujesz ich użycie?</span>
@@ -609,57 +590,9 @@ window.addEventListener('click', (e) => {
   }
 });
 </script>
-      
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const popup = document.getElementById("cookie-popup");
-  const acceptBtn = document.getElementById("accept-cookies");
-  const rejectBtn = document.getElementById("reject-cookies");
-  const form = document.querySelector(".contact-form");
-  const submitBtn = form.querySelector("button[type='submit']");
 
-  // blokada wysyłania formularza dopóki nie zaakceptuje cookies
-  submitBtn.disabled = true;
-
-  // pokaż popup po 0.5s
-  setTimeout(() => {
-    popup.style.bottom = "30px";
-  }, 500);
-
-  acceptBtn.addEventListener("click", function() {
-    popup.style.bottom = "-250px"; // zniknięcie w dół
-    submitBtn.disabled = false;
-  });
-
-  rejectBtn.addEventListener("click", function() {
-    alert("Nie możesz wysłać formularza bez akceptacji cookies.");
-    submitBtn.disabled = true;
-  });
-});
-</script>
-      
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
