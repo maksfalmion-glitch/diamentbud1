@@ -20,10 +20,10 @@ header nav a {color:white; margin-left:20px; font-weight:500; transition:0.3s;}
 header nav a:hover {color:#facc15;}
 
 /* HERO */
-.hero {background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/szkolenie.jpg') center/cover no-repeat; color:white; text-align:center; padding:120px 20px;}
+.hero {background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/trzy.png') center/cover no-repeat; color:white; text-align:center; padding:120px 20px;}
 .hero h1 {font-size:50px; margin-bottom:20px; text-shadow: 1px 1px 5px rgba(0,0,0,0.7);}
 .hero p {font-size:22px; margin-bottom:30px;}
-.hero .btn {background:#facc15; color:#111; padding:16px 32px; font-weight:bold; border-radius:6px; margin:0 10px; transition:0.3s;}
+.hero .btn {background:#facc15; color:#111; padding:16px 32px; font-weight:bold; border-radius:6px; transition:0.3s;}
 .hero .btn:hover {opacity:0.85;}
 .hero .btn.secondary {background:transparent; border:2px solid #facc15; color:white;}
 
@@ -58,14 +58,6 @@ header nav a:hover {color:#facc15;}
 /* FOOTER */
 footer {background:#111; color:white; text-align:center; padding:35px; margin-top:60px; font-size:14px;}
 footer .btn.secondary {background:transparent; border:2px solid #facc15; color:white; padding:8px 15px; border-radius:6px; margin:5px;}
-
-  .hero-buttons {
-  display: flex;
-  justify-content: center; /* wyśrodkowanie przycisków */
-  gap: 15px; /* odstęp między przyciskami */
-  flex-wrap: wrap; /* jeśli ekran jest wąski, przyciski przejdą w dół */
-}
-
 </style>
 </head>
 <body>
@@ -75,7 +67,7 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
     <div class="logo">DIAMENT BUD</div>
     <nav>
       <a href="index.html">Strona główna</a>
-      <a href="index.html#services">Oferta</a>
+      <a href="index2.html">Oferta</a>
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
   </div>
@@ -84,28 +76,15 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 <section class="hero">
   <h1>Cięcie diamentowe betonu i żelbetu</h1>
   <p>Profesjonalne cięcie konstrukcji betonowych, precyzyjnie i bezpiecznie.</p>
- <div class="hero-buttons">
-  <a class="btn" href="index.html#services">Zobacz ofertę</a>
-  <a class="btn secondary" href="index.html#kontakt">Kontakt</a>
-</div>
-
+  <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+    <a class="btn" href="index.html#services">Zobacz ofertę</a>
+    <a class="btn secondary" href="index.html#kontakt">Kontakt</a>
+  </div>
+</section>
 
 <section class="section-content">
   <div class="container">
     <h2>Główna / Cięcie diamentowe betonu i żelbetu</h2>
-<img 
-  src="images/trzy.png" 
-  alt="Cięcie diamentowe betonu"
-  style="
-    width:40%;
-    min-width:260px;
-    float:right;
-    margin:10px 0 30px 40px;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-  "
->
-
     <p>Obecnie, przy realizacji większości projektów związanych z demontażem konstrukcji żelbetowych, monolitycznych, ceglanych i innych, użycie narzędzia diamentowego jest nieodłącznym elementem prac budowlanych.</p>
     <p>Cięcie diamentowe jest wydajne, bezpieczne i nie powoduje dynamicznych obciążeń materiału, co gwarantuje brak pęknięć i minimalny hałas.</p>
 
@@ -165,7 +144,5 @@ footer .btn.secondary {background:transparent; border:2px solid #facc15; color:w
 </footer>
 
 </body>
-
 </html>
-
 
